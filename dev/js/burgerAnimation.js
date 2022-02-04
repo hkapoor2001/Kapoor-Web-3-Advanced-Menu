@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import {gsap} from "gsap";
 gsap.registerPlugin(DrawSVGPlugin);
 gsap.set(".xline",{alpha:1})
 
