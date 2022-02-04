@@ -136,19 +136,19 @@ header > div #nav-container #nav-menu-container #nav-menu-row-1 #nav-menu-row-1-
 header > div #nav-container #nav-menu-container #nav-menu-row-2 {
   grid-area: row2;
   display: grid;
-  grid-template-columns: 10% 30% 5% 27% 5% 13% 10%;
-  grid-template-areas: ". shortstories . poetry . artwork .";
+  grid-template-columns: 9% 30% 5% 25% 5% auto 9%;
+  grid-template-areas: ". shortstories . poetry . currentissue .";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories {
   grid-area: shortstories;
   display: grid;
-  grid-template-rows: 20% 70% 10%;
+  grid-template-rows: 19% 66% 15%;
   grid-template-areas: "row1" "row2" "row3";
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text {
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container {
   grid-area: row1;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text #poetrytext {
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
   font-family: "Gothic A1", sans-serif;
   font-size: 50px;
   color: white;
@@ -157,13 +157,60 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-img {
   grid-area: row2;
   background-image: url(../img/menuimage1.jpg);
+  background-size: cover;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-spacing {
   grid-area: row3;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry {
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container {
   grid-area: poetry;
+  display: grid;
+  grid-template-rows: 30% 55% 15%;
+  grid-template-areas: "row1" "row2" "row3";
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-artwork {
-  grid-area: artwork;
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container {
+  grid-area: row1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 40px;
+  color: white;
+  font-weight: lighter;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-img {
+  grid-area: row2;
+  background-image: url(../img/menuimage1.jpg);
+  background-size: cover;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-spacing {
+  grid-area: row3;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container {
+  grid-area: currentissue;
+  display: grid;
+  grid-template-rows: 45% 40% 15%;
+  grid-template-areas: "row1" "row2" "row3";
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container {
+  grid-area: row1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #current-issue-text {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 40px;
+  color: white;
+  font-weight: lighter;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-img {
+  grid-area: row2;
+  background-image: url(../img/menuimage1.jpg);
+  background-size: cover;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-spacing {
+  grid-area: row3;
 }

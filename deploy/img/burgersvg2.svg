@@ -1,0 +1,7 @@
+<svg width="116" height="81" viewBox="0 0 116 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path class="xline" id="x-cross-2" d="M45 64L84 25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+            <path class="xline" id="x-cross-1" d="M84 64L45 25" stroke="white" stroke-width="8" stroke-linecap="round"/>
+            <path class="xline" id="burgerbar1" d="M24 24H105" stroke="#E8FC53" stroke-width="11" stroke-miterlimit="1.55572" stroke-linecap="round"/>
+            <path class="burgerline" id="burgerbar2" d="M24 45H105" stroke="#EB3223" stroke-width="11" stroke-linecap="round"/>
+            <path class="burgerline" id="burgerbar3" d="M24 65H105" stroke="#134092" stroke-width="11" stroke-linecap="round"/>
+</svg>

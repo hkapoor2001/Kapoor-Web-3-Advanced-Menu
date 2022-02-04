@@ -1,0 +1,11 @@
+<svg width="73" height="52" viewBox="0 0 73 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="burgersvg">
+<g id="burger">
+<path id="burgerbar3" d="M4 42.0874H68.5551" stroke="#134092" stroke-width="8" stroke-linecap="round"/>
+<path id="burgerbar2" d="M4 25.626H68.5551" stroke="#EB3223" stroke-width="8" stroke-linecap="round"/>
+<path id="burgerbar1" d="M4 9.16431H68.5551" stroke="#E8FC53" stroke-width="8" stroke-miterlimit="1.55572" stroke-linecap="round"/>
+</g>
+<path id="x-cross-2" d="M14.3288 47.7107L57.5807 4" stroke="white" stroke-width="8" stroke-linecap="round"/>
+<path id="x-cross-1" d="M57.5807 47.7107L14.3288 4" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</g>
+</svg>
