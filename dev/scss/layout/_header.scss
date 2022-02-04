@@ -87,6 +87,7 @@ header{
                 grid-template-areas: 
                 ". row1 ." 
                 ". row2 .";
+
                 #nav-menu-row-1{
                     grid-area: row1;
                     display: flex;
@@ -113,6 +114,7 @@ header{
                         }
                     }
                 }
+
                 #nav-menu-row-2{
                     grid-area: row2;
                     display: grid;
@@ -121,24 +123,35 @@ header{
                     #nav-menu-row-2-short-stories{
                         grid-area: shortstories;
                         display: grid;
-                        grid-template-rows: 19% 66% 15%;
+                        grid-template-rows: 17% 68% 15%;
                         grid-template-areas: 
                         "row1"
                         "row2"
                         "row3";
                         #nav-menu-row-2-short-stories-text-container{
+                            display: flex;
+                            .fa-arrow-right{
+                                color: white;
+                                font-size: 20;
+                            }
                             grid-area:row1;
                             #short-stories-text{
                                 font-family: 'Gothic A1', sans-serif;
-                                font-size: 50px;
+                                font-size: 40px;
                                 color: white;
                                 font-weight: lighter;
                             }
                         }
+                        
+                        #nav-menu-row-2-short-stories-img:hover{
+                            background-image: url(../img/menuimage-1-rollover.jpg);
+                        }
+
                         #nav-menu-row-2-short-stories-img{
                             grid-area:row2;
-                            background-image: url(../img/menuimage1.jpg);
-                            background-size: cover;
+                            background-image: url(../img/menuimage-1.jpg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
                         }
                         #nav-menu-row-2-short-stories-spacing{
                             grid-area: row3;
@@ -161,15 +174,21 @@ header{
                             align-items: flex-end;
                             #poetry-text{
                                 font-family: 'Gothic A1', sans-serif;
-                                font-size: 40px;
+                                font-size: 35px;
                                 color: white;
                                 font-weight: lighter;
                             }
                         }
+
+                        #nav-menu-row-2-poetry-img:hover{
+                            background-image: url(../img/menuimage-2-rollover.jpg);
+                        }
+
                         #nav-menu-row-2-poetry-img{
                             grid-area:row2;
-                            background-image: url(../img/menuimage1.jpg);
-                            background-size: cover;
+                            background-image: url(../img/menuimage-2.jpg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
                         }
                         #nav-menu-row-2-poetry-spacing{
                             grid-area: row3;
@@ -194,17 +213,23 @@ header{
                             justify-content: flex-start;
                             align-items: flex-end;
 
-                            #current-issue-text{
+                            #poetry-text2{
                                 font-family: 'Gothic A1', sans-serif;
-                                font-size: 40px;
+                                font-size: 30px;
                                 color: white;
                                 font-weight: lighter;
                             }
                         }
+
+                        #nav-menu-row-2-current-issue-img:hover{
+                            background-image: url(../img/menuimage-3-rollover.jpg);
+                        }
+
                         #nav-menu-row-2-current-issue-img{
                             grid-area:row2;
-                            background-image: url(../img/menuimage1.jpg);
-                            background-size: cover;
+                            background-image: url(../img/menuimage-3.jpg);
+                            background-size: contain;
+                            background-repeat: no-repeat;
                         }
                         #nav-menu-row-2-current-issue-spacing{
                             grid-area: row3;

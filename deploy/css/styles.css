@@ -142,22 +142,31 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 {
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories {
   grid-area: shortstories;
   display: grid;
-  grid-template-rows: 19% 66% 15%;
+  grid-template-rows: 17% 68% 15%;
   grid-template-areas: "row1" "row2" "row3";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container {
+  display: flex;
   grid-area: row1;
+}
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container .fa-arrow-right {
+  color: white;
+  font-size: 20;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
   font-family: "Gothic A1", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   font-weight: lighter;
 }
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-img:hover {
+  background-image: url(../img/menuimage-1-rollover.jpg);
+}
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-img {
   grid-area: row2;
-  background-image: url(../img/menuimage1.jpg);
-  background-size: cover;
+  background-image: url(../img/menuimage-1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-spacing {
   grid-area: row3;
@@ -176,14 +185,18 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
   font-family: "Gothic A1", sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   color: white;
   font-weight: lighter;
 }
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-img:hover {
+  background-image: url(../img/menuimage-2-rollover.jpg);
+}
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-img {
   grid-area: row2;
-  background-image: url(../img/menuimage1.jpg);
-  background-size: cover;
+  background-image: url(../img/menuimage-2.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-spacing {
   grid-area: row3;
@@ -200,16 +213,20 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
   justify-content: flex-start;
   align-items: flex-end;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #current-issue-text {
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #poetry-text2 {
   font-family: "Gothic A1", sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   font-weight: lighter;
 }
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-img:hover {
+  background-image: url(../img/menuimage-3-rollover.jpg);
+}
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-img {
   grid-area: row2;
-  background-image: url(../img/menuimage1.jpg);
-  background-size: cover;
+  background-image: url(../img/menuimage-3.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-spacing {
   grid-area: row3;
