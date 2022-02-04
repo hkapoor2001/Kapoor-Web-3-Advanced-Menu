@@ -31,8 +31,7 @@ header {
 }
 header > div {
   display: grid;
-  grid-template-areas: ". icons . logo . burger .";
-  grid-template-columns: 5% 20% 5% 40% 5% 20% 5%;
+  grid-template-areas: "icons logo burger " "navg nav nav";
 }
 header > div #logo-container {
   padding-top: 11%;
@@ -74,6 +73,9 @@ header > div #social-icons-container .fa-instagram-square {
   font-size: 30px;
 }
 header > div #nav-container {
+  grid-area: nav;
+  width: 100%;
+  height: 100%;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -83,35 +85,33 @@ header > div #nav-container {
 }
 header > div #nav-container #nav-div-container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 header > div #nav-container #nav-div-container .navdiv {
   width: 10%;
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-header > div #nav-container #nav-div-container .navdiv .nested-navdiv {
   background-color: black;
-  width: 100%;
-  height: 5%;
 }
 header > div #nav-container #nav-menu-container {
   display: grid;
   position: absolute;
   z-index: 5;
   grid-template-rows: 32% 68%;
-  grid-template-columns: 5% 90% 5%;
-  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
   height: 100%;
-  grid-template-areas: ". row1 ." ". row2 .";
+  grid-template-areas: "row1" "row2";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-1 {
   grid-area: row1;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+  width: 100%;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-1 #nav-menu-row-1-text {
   display: flex;
@@ -129,24 +129,31 @@ header > div #nav-container #nav-menu-container #nav-menu-row-1 #nav-menu-row-1-
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-1 #nav-menu-row-1-text .menurow1link {
   font-family: "Gothic A1", sans-serif;
-  font-size: 20px;
+  font-size: 12px;
   color: white;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  header > div #nav-container #nav-menu-container #nav-menu-row-1 #nav-menu-row-1-text .menurow1link {
+    font-size: 20px;
+  }
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 {
   grid-area: row2;
   display: grid;
-  grid-template-columns: 9% 30% 5% 25% 5% auto 9%;
-  grid-template-areas: ". shortstories . poetry . currentissue .";
+  grid-template-columns: 50% 30% 20%;
+  grid-template-areas: "shortstories poetry currentissue";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories {
   grid-area: shortstories;
   display: grid;
-  grid-template-rows: 17% 68% 15%;
-  grid-template-areas: "row1" "row2" "row3";
+  grid-template-rows: 40% 60%;
+  grid-template-areas: "row1" "row2";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   grid-area: row1;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container .fa-arrow-right {
@@ -155,9 +162,19 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
   font-family: "Gothic A1", sans-serif;
-  font-size: 40px;
+  font-size: 12;
   color: white;
   font-weight: lighter;
+}
+@media (min-width: 768px) {
+  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
+    font-size: 40px;
+  }
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-img:hover {
   background-image: url(../img/menuimage-1-rollover.jpg);
@@ -168,14 +185,11 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
   background-size: contain;
   background-repeat: no-repeat;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-spacing {
-  grid-area: row3;
-}
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container {
   grid-area: poetry;
   display: grid;
-  grid-template-rows: 30% 55% 15%;
-  grid-template-areas: "row1" "row2" "row3";
+  grid-template-rows: 40% 60%;
+  grid-template-areas: "row1" "row2";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container {
   grid-area: row1;
@@ -185,9 +199,19 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
   font-family: "Gothic A1", sans-serif;
-  font-size: 35px;
+  font-size: 16px;
   color: white;
   font-weight: lighter;
+}
+@media (min-width: 768px) {
+  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
+    font-size: 35px;
+  }
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-img:hover {
   background-image: url(../img/menuimage-2-rollover.jpg);
@@ -198,14 +222,11 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
   background-size: contain;
   background-repeat: no-repeat;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-spacing {
-  grid-area: row3;
-}
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container {
   grid-area: currentissue;
   display: grid;
-  grid-template-rows: 45% 40% 15%;
-  grid-template-areas: "row1" "row2" "row3";
+  grid-template-rows: 40% 60%;
+  grid-template-areas: "row1" "row2";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container {
   grid-area: row1;
@@ -215,9 +236,19 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #poetry-text2 {
   font-family: "Gothic A1", sans-serif;
-  font-size: 30px;
   color: white;
   font-weight: lighter;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #poetry-text2 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #poetry-text2 {
+    font-size: 30px;
+  }
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-img:hover {
   background-image: url(../img/menuimage-3-rollover.jpg);
@@ -227,7 +258,4 @@ header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-
   background-image: url(../img/menuimage-3.jpg);
   background-size: contain;
   background-repeat: no-repeat;
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-spacing {
-  grid-area: row3;
 }

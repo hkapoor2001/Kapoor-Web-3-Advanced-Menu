@@ -6,8 +6,9 @@ header{
     >div{
         display: grid;
         grid-template-areas: 
-        ". icons . logo . burger .";
-        grid-template-columns: 5% 20% 5% 40% 5% 20% 5% ;
+        "icons logo burger "
+        "navg nav nav";
+        // grid-template-columns: 34% 32% 34% ;
 
         #logo-container{
         padding-top: 11%;
@@ -53,22 +54,23 @@ header{
         }
 
         #nav-container{
+            grid-area: nav;
+            width: 100%;
+            height: 100%;
+            
             #nav-div-container{
                 display: flex;
-                width: 100vw;
-                height: 100vh;
+                width: 100%;
+                height: 100%;
                 .navdiv{
                     width: 10%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
-                    .nested-navdiv{
-                        background-color: black;
-                        width: 100%;
-                        height: 5%;
-                    }
-                }
+                    background-color: black;
             }
+            }
+
             position: fixed;
             width: 100%;
             height: 100%;
@@ -81,18 +83,20 @@ header{
                 position: absolute;
                 z-index: 5;
                 grid-template-rows: 32% 68%;
-                grid-template-columns: 5% 90% 5%;
-                width: 100%;
+                margin-left: 5%;
+                margin-right: 5%;
+                width:  90%;
                 height: 100%;
                 grid-template-areas: 
-                ". row1 ." 
-                ". row2 .";
+                "row1" 
+                "row2";
 
                 #nav-menu-row-1{
                     grid-area: row1;
                     display: flex;
                     align-items: flex-end;
                     justify-content: flex-end;
+                    width: 100%;
                     #nav-menu-row-1-text{
                         display: flex;
                         align-items: flex-end;
@@ -108,9 +112,13 @@ header{
                         }
                         .menurow1link{
                             font-family: 'Gothic A1', sans-serif;
-                            font-size: 20px;
+                            font-size: 12px;
                             color: white;
                             text-decoration: none;
+                            @include md{
+                                font-size: 20px;
+                            }
+
                         }
                     }
                 }
@@ -118,18 +126,20 @@ header{
                 #nav-menu-row-2{
                     grid-area: row2;
                     display: grid;
-                    grid-template-columns: 9% 30% 5% 25% 5% auto 9%;
-                    grid-template-areas: ". shortstories . poetry . currentissue .";
+                    grid-template-columns: 50% 30% 20%;
+                    grid-template-areas: "shortstories poetry currentissue";
+
                     #nav-menu-row-2-short-stories{
                         grid-area: shortstories;
                         display: grid;
-                        grid-template-rows: 17% 68% 15%;
+                        grid-template-rows: 40% 60%;
                         grid-template-areas: 
                         "row1"
-                        "row2"
-                        "row3";
+                        "row2";
                         #nav-menu-row-2-short-stories-text-container{
                             display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
                             .fa-arrow-right{
                                 color: white;
                                 font-size: 20;
@@ -137,7 +147,13 @@ header{
                             grid-area:row1;
                             #short-stories-text{
                                 font-family: 'Gothic A1', sans-serif;
-                                font-size: 40px;
+                                font-size: 12;
+                                @include md{
+                                    font-size: 20px;
+                                }
+                                @include lg{
+                                    font-size: 40px;
+                                }
                                 color: white;
                                 font-weight: lighter;
                             }
@@ -153,19 +169,15 @@ header{
                             background-size: contain;
                             background-repeat: no-repeat;
                         }
-                        #nav-menu-row-2-short-stories-spacing{
-                            grid-area: row3;
-                        }
 
                     }
                     #nav-menu-row-2-poetry-container{
                         grid-area: poetry;
                         display: grid;
-                        grid-template-rows: 30% 55% 15%;
-                        grid-template-areas: 
+                        grid-template-rows: 40% 60%;
+                        grid-template-areas:
                         "row1"
-                        "row2"
-                        "row3";
+                        "row2";
 
                         #nav-menu-row-2-poetry-text-container{
                             grid-area:row1;
@@ -174,7 +186,13 @@ header{
                             align-items: flex-end;
                             #poetry-text{
                                 font-family: 'Gothic A1', sans-serif;
-                                font-size: 35px;
+                                font-size: 16px;
+                                @include md{
+                                    font-size: 20px;
+                                }
+                                @include lg{
+                                    font-size: 35px;
+                                }
                                 color: white;
                                 font-weight: lighter;
                             }
@@ -190,9 +208,6 @@ header{
                             background-size: contain;
                             background-repeat: no-repeat;
                         }
-                        #nav-menu-row-2-poetry-spacing{
-                            grid-area: row3;
-                        }
                     }
 
 
@@ -201,11 +216,10 @@ header{
                     #nav-menu-row-2-current-issue-container{
                         grid-area: currentissue;
                         display: grid;
-                        grid-template-rows: 45% 40% 15%;
+                        grid-template-rows: 40% 60%;
                         grid-template-areas: 
                         "row1"
-                        "row2"
-                        "row3";
+                        "row2";
 
                         #nav-menu-row-2-current-issue-text-container{
                             grid-area:row1;
@@ -215,9 +229,15 @@ header{
 
                             #poetry-text2{
                                 font-family: 'Gothic A1', sans-serif;
-                                font-size: 30px;
                                 color: white;
                                 font-weight: lighter;
+                                font-size: 12px;
+                                @include md{
+                                    font-size: 16px;
+                                }
+                                @include lg{
+                                    font-size: 30px;
+                                }
                             }
                         }
 
@@ -230,9 +250,6 @@ header{
                             background-image: url(../img/menuimage-3.jpg);
                             background-size: contain;
                             background-repeat: no-repeat;
-                        }
-                        #nav-menu-row-2-current-issue-spacing{
-                            grid-area: row3;
                         }
                     }
 
