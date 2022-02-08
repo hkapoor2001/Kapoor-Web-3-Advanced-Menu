@@ -31,7 +31,7 @@ header {
 }
 header > div {
   display: grid;
-  grid-template-areas: "icons logo burger " "navg nav nav";
+  grid-template-areas: "icons logo burger " "nav nav nav";
 }
 header > div #logo-container {
   padding-top: 11%;
@@ -42,6 +42,7 @@ header > div #logo-container {
   z-index: 10;
 }
 header > div #burger-container {
+  margin-right: 10%;
   padding-top: 11%;
   grid-area: burger;
   display: flex;
@@ -50,6 +51,7 @@ header > div #burger-container {
   z-index: 10;
 }
 header > div #social-icons-container {
+  margin-left: 10%;
   z-index: 10;
   padding-top: 11%;
   grid-area: icons;
@@ -74,8 +76,8 @@ header > div #social-icons-container .fa-instagram-square {
 }
 header > div #nav-container {
   grid-area: nav;
-  width: 100%;
-  height: 100%;
+  width: 100vh;
+  height: 100vh;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -97,21 +99,19 @@ header > div #nav-container #nav-div-container .navdiv {
 }
 header > div #nav-container #nav-menu-container {
   display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 32% 68%;
+  grid-template-areas: ". row1 ." ". row2 .";
   position: absolute;
   z-index: 5;
-  grid-template-rows: 32% 68%;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
+  width: 100%;
   height: 100%;
-  grid-template-areas: "row1" "row2";
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-1 {
   grid-area: row1;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  width: 100%;
 }
 header > div #nav-container #nav-menu-container #nav-menu-row-1 #nav-menu-row-1-text {
   display: flex;
@@ -141,121 +141,25 @@ header > div #nav-container #nav-menu-container #nav-menu-row-1 #nav-menu-row-1-
 header > div #nav-container #nav-menu-container #nav-menu-row-2 {
   grid-area: row2;
   display: grid;
-  grid-template-columns: 50% 30% 20%;
-  grid-template-areas: "shortstories poetry currentissue";
+  grid-template-columns: 35% 35% auto;
+  gap: 5%;
+  grid-template-areas: "stories poetry current";
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories {
-  grid-area: shortstories;
-  display: grid;
-  grid-template-rows: 40% 60%;
-  grid-template-areas: "row1" "row2";
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #short-stories {
+  grid-area: stories;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  grid-area: row1;
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #short-stories #menuimage-1 {
+  max-width: 100%;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container .fa-arrow-right {
-  color: white;
-  font-size: 20;
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
-  font-family: "Gothic A1", sans-serif;
-  font-size: 12;
-  color: white;
-  font-weight: lighter;
-}
-@media (min-width: 768px) {
-  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
-    font-size: 20px;
-  }
-}
-@media (min-width: 992px) {
-  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-text-container #short-stories-text {
-    font-size: 40px;
-  }
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-img:hover {
-  background-image: url(../img/menuimage-1-rollover.jpg);
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-short-stories #nav-menu-row-2-short-stories-img {
-  grid-area: row2;
-  background-image: url(../img/menuimage-1.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container {
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #poetry {
   grid-area: poetry;
-  display: grid;
-  grid-template-rows: 40% 60%;
-  grid-template-areas: "row1" "row2";
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container {
-  grid-area: row1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #poetry #menuimage-2 {
+  max-width: 100%;
 }
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
-  font-family: "Gothic A1", sans-serif;
-  font-size: 16px;
-  color: white;
-  font-weight: lighter;
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #currentissue {
+  grid-area: current;
 }
-@media (min-width: 768px) {
-  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
-    font-size: 20px;
-  }
-}
-@media (min-width: 992px) {
-  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-text-container #poetry-text {
-    font-size: 35px;
-  }
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-img:hover {
-  background-image: url(../img/menuimage-2-rollover.jpg);
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-poetry-container #nav-menu-row-2-poetry-img {
-  grid-area: row2;
-  background-image: url(../img/menuimage-2.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container {
-  grid-area: currentissue;
-  display: grid;
-  grid-template-rows: 40% 60%;
-  grid-template-areas: "row1" "row2";
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container {
-  grid-area: row1;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #poetry-text2 {
-  font-family: "Gothic A1", sans-serif;
-  color: white;
-  font-weight: lighter;
-  font-size: 12px;
-}
-@media (min-width: 768px) {
-  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #poetry-text2 {
-    font-size: 16px;
-  }
-}
-@media (min-width: 992px) {
-  header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-text-container #poetry-text2 {
-    font-size: 30px;
-  }
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-img:hover {
-  background-image: url(../img/menuimage-3-rollover.jpg);
-}
-header > div #nav-container #nav-menu-container #nav-menu-row-2 #nav-menu-row-2-current-issue-container #nav-menu-row-2-current-issue-img {
-  grid-area: row2;
-  background-image: url(../img/menuimage-3.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
+header > div #nav-container #nav-menu-container #nav-menu-row-2 #currentissue #menuimage-3 {
+  max-width: 100%;
 }

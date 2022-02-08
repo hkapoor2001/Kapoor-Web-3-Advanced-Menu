@@ -7,8 +7,8 @@ header{
         display: grid;
         grid-template-areas: 
         "icons logo burger "
-        "navg nav nav";
-        // grid-template-columns: 34% 32% 34% ;
+        "nav nav nav";
+
 
         #logo-container{
         padding-top: 11%;
@@ -20,6 +20,7 @@ header{
         }
 
         #burger-container {
+            margin-right: 10%;
             padding-top: 11%;
             grid-area: burger;
             display: flex;
@@ -29,6 +30,7 @@ header{
         }
 
         #social-icons-container{
+            margin-left: 10%;
             z-index: 10;
             padding-top: 11%;
             grid-area: icons;
@@ -55,8 +57,8 @@ header{
 
         #nav-container{
             grid-area: nav;
-            width: 100%;
-            height: 100%;
+            width: 100vh;
+            height: 100vh;
             
             #nav-div-container{
                 display: flex;
@@ -80,23 +82,21 @@ header{
 
             #nav-menu-container{
                 display: grid;
+                grid-template-columns: 5% 90% 5%;
+                grid-template-rows: 32% 68%;
+                grid-template-areas:
+                 ". row1 ."
+                 ". row2 .";
                 position: absolute;
                 z-index: 5;
-                grid-template-rows: 32% 68%;
-                margin-left: 5%;
-                margin-right: 5%;
-                width:  90%;
+                width: 100%;
                 height: 100%;
-                grid-template-areas: 
-                "row1" 
-                "row2";
 
                 #nav-menu-row-1{
                     grid-area: row1;
                     display: flex;
                     align-items: flex-end;
                     justify-content: flex-end;
-                    width: 100%;
                     #nav-menu-row-1-text{
                         display: flex;
                         align-items: flex-end;
@@ -123,138 +123,32 @@ header{
                     }
                 }
 
-                #nav-menu-row-2{
+                #nav-menu-row-2 {
                     grid-area: row2;
                     display: grid;
-                    grid-template-columns: 50% 30% 20%;
-                    grid-template-areas: "shortstories poetry currentissue";
+                    grid-template-columns: 35% 35% auto;
+                    gap: 5%;
+                    grid-template-areas: "stories poetry current";
 
-                    #nav-menu-row-2-short-stories{
-                        grid-area: shortstories;
-                        display: grid;
-                        grid-template-rows: 40% 60%;
-                        grid-template-areas: 
-                        "row1"
-                        "row2";
-                        #nav-menu-row-2-short-stories-text-container{
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: flex-start;
-                            .fa-arrow-right{
-                                color: white;
-                                font-size: 20;
-                            }
-                            grid-area:row1;
-                            #short-stories-text{
-                                font-family: 'Gothic A1', sans-serif;
-                                font-size: 12;
-                                @include md{
-                                    font-size: 20px;
-                                }
-                                @include lg{
-                                    font-size: 40px;
-                                }
-                                color: white;
-                                font-weight: lighter;
-                            }
-                        }
-                        
-                        #nav-menu-row-2-short-stories-img:hover{
-                            background-image: url(../img/menuimage-1-rollover.jpg);
-                        }
-
-                        #nav-menu-row-2-short-stories-img{
-                            grid-area:row2;
-                            background-image: url(../img/menuimage-1.jpg);
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                        }
-
+                    #short-stories{
+                        grid-area: stories;
+                        #menuimage-1{
+                            max-width: 100%;}
                     }
-                    #nav-menu-row-2-poetry-container{
+
+                    #poetry{
                         grid-area: poetry;
-                        display: grid;
-                        grid-template-rows: 40% 60%;
-                        grid-template-areas:
-                        "row1"
-                        "row2";
-
-                        #nav-menu-row-2-poetry-text-container{
-                            grid-area:row1;
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: flex-end;
-                            #poetry-text{
-                                font-family: 'Gothic A1', sans-serif;
-                                font-size: 16px;
-                                @include md{
-                                    font-size: 20px;
-                                }
-                                @include lg{
-                                    font-size: 35px;
-                                }
-                                color: white;
-                                font-weight: lighter;
-                            }
-                        }
-
-                        #nav-menu-row-2-poetry-img:hover{
-                            background-image: url(../img/menuimage-2-rollover.jpg);
-                        }
-
-                        #nav-menu-row-2-poetry-img{
-                            grid-area:row2;
-                            background-image: url(../img/menuimage-2.jpg);
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                        }
+                        #menuimage-2{
+                            max-width: 100%;}
                     }
 
-
-
-
-                    #nav-menu-row-2-current-issue-container{
-                        grid-area: currentissue;
-                        display: grid;
-                        grid-template-rows: 40% 60%;
-                        grid-template-areas: 
-                        "row1"
-                        "row2";
-
-                        #nav-menu-row-2-current-issue-text-container{
-                            grid-area:row1;
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: flex-end;
-
-                            #poetry-text2{
-                                font-family: 'Gothic A1', sans-serif;
-                                color: white;
-                                font-weight: lighter;
-                                font-size: 12px;
-                                @include md{
-                                    font-size: 16px;
-                                }
-                                @include lg{
-                                    font-size: 30px;
-                                }
-                            }
-                        }
-
-                        #nav-menu-row-2-current-issue-img:hover{
-                            background-image: url(../img/menuimage-3-rollover.jpg);
-                        }
-
-                        #nav-menu-row-2-current-issue-img{
-                            grid-area:row2;
-                            background-image: url(../img/menuimage-3.jpg);
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                        }
+                    #currentissue{
+                    grid-area: current;
+                    #menuimage-3{
+                        max-width: 100%;}
                     }
-
-                }
             }
         }
     }
+}
 }
